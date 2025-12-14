@@ -1,0 +1,33 @@
+POST http://localhost:3001/api/school/students
+Content-Type: application/json
+
+{ 
+    "name": "Nguyen Van B", 
+    "email": "B@gmail.com" 
+}
+
+###
+POST http://localhost:3001/api/school/courses
+Content-Type: application/json
+
+{ 
+    "title": "ReactJS", 
+    "code": "REACT01" 
+}
+
+###
+POST http://localhost:3001/api/school/enroll
+Content-Type: application/json
+
+{ 
+    "studentId": 1, 
+    "courseId": 1 
+}
+
+###
+GET http://localhost:3001/api/school/students/1
+Content-Type: application/json
+
+###
+DELETE http://localhost:3001/api/school/courses/2
+Content-Type: application/json
