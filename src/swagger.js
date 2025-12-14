@@ -1,6 +1,7 @@
 import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
-
+import dotenv from "dotenv";
+dotenv.config();
 const options = {
   definition: {
     openapi: "3.0.0",
@@ -8,7 +9,7 @@ const options = {
       title: "CRUD API",
       description: "API documentation for CRUD application",
     },
-    servers: [{ url: "http://localhost:3001", description: "Local server" }],
+    servers: [{ url: process.env.URL_API, description: "Local server" }],
     components: {
       schemas: {
         User: {
